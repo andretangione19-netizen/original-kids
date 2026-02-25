@@ -1,0 +1,27 @@
+ORIGINAL KIDS - Pacote pronto para deploy (Next.js)
+
+Passos rápidos para colocar no ar (Vercel):
+
+1) Baixe ou crie os arquivos deste projeto conforme instruções.
+2) Crie uma conta em https://vercel.com e faça login.
+3) (opcional local) Para testar:
+   - npm install
+   - npm run dev
+
+4) Suba o projeto na Vercel:
+   - Vercel → New Project → Import → Upload Folder → selecione esta pasta
+
+5) No painel do projeto na Vercel, vá em Settings → Environment Variables e adicione:
+   - WHATSAPP_TOKEN  (token do Meta for Developers)
+   - WHATSAPP_PHONE_ID (ID do número comercial)
+   - NEXT_PUBLIC_WHATSAPP_NUMBER (já vem: 5519992024758)
+
+6) Clique em Deploy. O site será publicado (ex: https://original-kids.vercel.app).
+
+Testes:
+- Botão 'Falar no WhatsApp' abre o app com mensagem pronta.
+- Checkout envia pedido à API /api/orders, que dispara mensagem automática via WhatsApp Cloud API.
+
+Observações:
+- Para mensagens reais, use token e número verificados.
+- As variáveis de ambiente devem ser criadas na Vercel (não subir o arquivo .env).
